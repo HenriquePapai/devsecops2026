@@ -36,3 +36,4 @@ jobs:
         run: pip install safety
       - name: Análise de dependências
         run: safety scan --key ${{ secrets.SAFETY_API_KEY }}
+        
