@@ -27,16 +27,12 @@ jobs:
         run: pip install bandit
       - name: Análise estática
         run: bandit -r .
-      - name: Safety Scan
-        run: pip install Safety
-      - name: Análise de dependências
-        run: safety sacn
-    safety:
-      name: "Safety Scan"
-      runs-on: ubuntu-latest
-      steps:
+  safety:
+    name: "Safety Scan"
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
       - name: Instalando Safety
         run: pip install safety
       - name: Análise de dependências
-        run: safety sacn
+        run: safety scan
