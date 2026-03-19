@@ -7,7 +7,7 @@ on:
     branches: [main]
 
   workflow_dispatch: 
-  
+
 jobs:
   testes_unitarios:
     name: "Integração"
@@ -27,4 +27,7 @@ jobs:
         run: pip install bandit
       - name: Análise estática
         run: bandit -r .
-  
+      - name: Safety Scan
+        run: pip install Safety
+      - name: Análise de dependências
+        run: safety sacn
