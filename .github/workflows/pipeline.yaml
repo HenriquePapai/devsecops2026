@@ -37,6 +37,6 @@ jobs:
       steps:
       - uses: actions/checkout@v2
       - name: Instalando Safety
-        run: pip install Safety
+        run: pip install safety
       - name: Análise de dependências
         run: safety sacn
